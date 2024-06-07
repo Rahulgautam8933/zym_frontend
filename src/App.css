@@ -1,0 +1,260 @@
+.result1container {
+}
+
+.spiner1 {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-up-box {
+  border: 1px solid;
+  padding: 20px;
+}
+.result-up-boxs {
+  display: flex;
+}
+
+p {
+  margin: 0;
+}
+
+.resutl-up-left-box {
+  position: relative;
+  width: 15%;
+}
+.resutl-up-left-box img {
+  width: 100%;
+}
+.resutl-up-mid-box {
+  width: 70%;
+  text-align: center;
+}
+.resutl-up-mid-box p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.resutl-up-mid-box h3 {
+  margin: 0;
+  font-size: 2.62rem;
+}
+.resutl-up-mid-box span {
+  font-size: 1.7rem;
+  font-weight: bold;
+  border: 4px solid black;
+  padding: 1px 12px;
+  /* margin: 1rem 0rem; */
+}
+.resutl-up-mid-box h2 {
+  margin: 0;
+}
+.resutl-up-right-box {
+  position: relative;
+  width: 15%;
+}
+.resutl-up-right-box img {
+  width: 100%;
+}
+
+.result-up-mid-box2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-up-mid-box21 {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.result-up-mid-box21 p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.result-up-mid-box22 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.result-up-mid-box22 p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.result-mid-sec1 {
+  display: flex;
+}
+
+.result-mid-sec1-box1 {
+  padding: 8px 12px;
+  width: 22%;
+  border: 1px solid black;
+  position: relative;
+  border-top: none;
+}
+.result-mid-sec1-box2 {
+  border: 1px solid black;
+  /* padding: 8px 3px; */
+  border-top: none;
+  border-left: none;
+  width: 26%;
+  font-size: 1.4vw;
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mid-boxs-grid {
+  display: flex;
+}
+.mid-boxs-grid p {
+  width: 33.33%;
+  margin: 0;
+}
+
+.border-right {
+  border-right: 1px solid black;
+}
+
+.padding12 {
+  padding: 8px 5px;
+}
+
+.center12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+  position: relative;
+}
+.d-flex p {
+  width: 24.8%;
+  margin: 0;
+}
+.grandTotalcard {
+  position: relative;
+}
+
+.center121 span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.heading-font-size {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.result-mid-sec1-box1 p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.result-mid-sec1-box1 p span {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.anki {
+  background-image: url("./assets/schhol.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: none;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+/* .rjg {
+  background-image: url("./assets/logo.png");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.watermark {
+  /* position: absolute;
+  opacity: 0.5;  */
+  width: 500px;
+}
+.container-ak {
+  position: relative;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1; /* Adjust the opacity as needed */
+  pointer-events: none; /* Make sure the watermark doesn't interfere with user interactions */
+}
+
+/* login */
+
+.loginContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(180, 175, 247);
+  position: relative;
+}
+
+.loginbox {
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
