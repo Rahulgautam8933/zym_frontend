@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { noTokenPostRequest } from "../Helpers/Helper";
 import Cookies from "js-cookie";
+import toast from "react-hot-toast";
 
 function Home() {
   const [formData, setFormData] = useState({
@@ -22,11 +23,13 @@ function Home() {
     noTokenPostRequest({ url, cred })
       .then((res) => {
         Cookies.set("zymToken", res?.data?.token);
+        toast.success("user login successfully");
 
         window.location.href = `/dashboard`;
       })
       .catch((err) => {
         console.log(err);
+        toast.error(err?.response?.data?.message);
       });
   };
   return (

@@ -40,9 +40,11 @@ function AddData() {
     postRequestForImg({ url: url, cred: cred })
       .then((res) => {
         console.log(res);
+        toast.success("user created successfuly ");
         navigator("/dashboard");
       })
       .catch((error) => {
+        toast.error(error?.response?.data?.msg);
         console.log(error);
       });
   };
@@ -50,152 +52,6 @@ function AddData() {
     <>
       <div className="container mt-4">
         <h2 className="text-center">Add data</h2>
-
-        {/* <form onSubmit={handleSubmit} class="row g-3">
-          <div class="col-6">
-            <label for="inputEmail4" class="form-label">
-              name
-            </label>
-            <input type="text" required class="form-control" id="inputEmail4" />
-          </div>
-          <div class="col-6">
-            <label for="inputPassword4" class="form-label">
-              email
-            </label>
-            <input
-              type="email"
-              required
-              class="form-control"
-              id="inputPassword4"
-            />
-          </div>
-          <div class="col-6">
-            <label for="inputAddress" class="form-label">
-              contact
-            </label>
-            <input
-              type="Number"
-              class="form-control"
-              id="inputAddress"
-              required
-              placeholder="contact"
-            />
-          </div>
-          <div class="col-6">
-            <label for="aadhaarNumber" class="form-label">
-              aadhaarNumber
-            </label>
-            <input
-              type="Number"
-              class="form-control"
-              required
-              id="aadhaarNumber"
-              placeholder="aadhaarNumber"
-            />
-          </div>
-          <div class="col-6">
-            <label for="inputAddress1" class="form-label">
-              weight
-            </label>
-            <input
-              type="Number"
-              class="form-control"
-              id="inputAddress1"
-              required
-              placeholder="weight"
-            />
-          </div>
-          <div class="col-6">
-            <label for="height" class="form-label">
-              height
-            </label>
-            <input
-              type="Number"
-              class="form-control"
-              id="height"
-              required
-              placeholder="height"
-            />
-          </div>
-          <div class="col-6">
-            <label for="pulse" class="form-label">
-              pulse
-            </label>
-            <input
-              type="Number"
-              class="form-control"
-              id="pulse"
-              required
-              placeholder="pulse"
-            />
-          </div>
-          <div class="col-6">
-            <label for="duration" class="form-label">
-              duration
-            </label>
-            <input
-              type="Number"
-              class="form-control"
-              id="duration"
-              required
-              placeholder="duration"
-            />
-          </div>
-          <div class="col-6">
-            <label for="amount" class="form-label">
-              amount
-            </label>
-            <input
-              type="Number"
-              class="form-control"
-              id="amount"
-              required
-              placeholder="amount"
-            />
-          </div>
-          <div class="col-6">
-            <label for="bilingDate" class="form-label">
-              bilingDate
-            </label>
-            <input
-              type="date"
-              class="form-control"
-              id="amobilingDateunt"
-              placeholder="bilingDate"
-              required
-            />
-          </div>
-          <div class="col-6">
-            <label for="dob" class="form-label">
-              dob
-            </label>
-            <input
-              type="date"
-              class="form-control"
-              id="dob"
-              placeholder="dob"
-              required
-            />
-          </div>
-          <div class="col-6">
-            <label for="dob" class="form-label">
-              dob
-            </label>
-            <input
-              type="file"
-              class="form-control"
-              id="dob"
-              placeholder="dob"
-              required
-            />
-          </div>
-
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">
-              Add
-            </button>
-          </div>
-        </form> */}
 
         <form onSubmit={handleSubmit} className="row g-3">
           <div className="col-6">

@@ -16,6 +16,9 @@ function App() {
       <div>
         <Toaster />
       </div>
+      <div>
+        <Toaster />
+      </div>
       <BrowserRouter>
         <Navbar />
         <Routes>
