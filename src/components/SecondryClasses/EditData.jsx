@@ -187,20 +187,32 @@ function EditData() {
               placeholder="Pulse"
             />
           </div>
-          <div className="col-6">
+       <div className="col-6">
             <label htmlFor="duration" className="form-label">
               Duration
             </label>
-            <input
-              type="number"
+            <select
               name="duration"
               value={formData.duration}
               onChange={handleChange}
               required
               className="form-control"
               id="duration"
-              placeholder="Duration"
-            />
+            >
+              <option value="">Select Duration</option>
+              <option value="30">1 Month</option>
+              <option value="60">2 Months</option>
+              <option value="90">3 Months</option>
+              <option value="120">4 Months</option>
+              <option value="150">5 Months</option>
+              <option value="180">6 Months</option>
+              <option value="210">7 Months</option>
+              <option value="240">8 Months</option>
+              <option value="270">9 Months</option>
+              <option value="300">10 Months</option>
+              <option value="330">11 Months</option>
+              <option value="360">12 Months</option>
+            </select>
           </div>
           <div className="col-6">
             <label htmlFor="amount" className="form-label">
