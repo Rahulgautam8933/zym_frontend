@@ -49,7 +49,7 @@ const SecondryClasses = () => {
       })
       .catch((error) => {
         console.log(error);
-        navigator("/");
+        
       });
     getRequest(`api/v1/birthday`)
       .then((res) => {
@@ -59,7 +59,7 @@ const SecondryClasses = () => {
       })
       .catch((error) => {
         console.log(error);
-        navigator("/");
+        
       });
   }, [updateStatus, currentPage, query]);
 
