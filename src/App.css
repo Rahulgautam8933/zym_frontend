@@ -83,6 +83,17 @@ p {
   margin: 0;
 }
 
+.loading{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: #00dbeba3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .result-mid-sec1 {
   display: flex;
 }

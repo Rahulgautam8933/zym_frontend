@@ -45,23 +45,178 @@ const UserData = () => {
       <button className="btn btn-secondary m-4" onClick={printResult}>
         Print
       </button>
-      <h2 className="text-center">Details</h2>
 
-      <div className="rjg" style={{ width: "80%", margin: "1rem auto" }}>
-        <div className="result1container" id="printinvice21">
-          <p>name: {userData?.name}</p>
-          <p>email: {userData?.email}</p>
-          <p>contact: {userData?.contact}</p>
-          <p> weight: {userData?.weight}</p>
-          <p>amount: {userData?.amount}</p>
-          <p>bilingDate: {userData?.bilingDate}</p>
-          <p>dob: {userData?.dob}</p> <p> height: {userData?.height}</p>
-          <p>pulse: {userData?.pulse}</p>
-          <p>duration: {userData?.duration}</p>
-          <p>aadhaarNumber: {userData?.aadhaarNumber}</p>
-          <p>
-            <img src={userData?.aadhaarImage?.url} alt="img" />
-          </p>
+      <div id="printinvice21" className="container rounded bg-white mt-5 mb-5">
+        <div className="row">
+          <div className="col-md-4 border-right">
+            <div className="d-flex flex-column align-items-center text-center p-3 py-">
+              <img
+                className="mt-5"
+                width="200px"
+                src={userData?.aadhaarImage?.url}
+                alt="Profile"
+              />
+              <span className="text-black-50">1458754785</span>
+              <span className="border px-3 p-1 add-experience">
+                <i className="fa fa-plus"></i>&nbsp;Download Adhaar
+              </span>{" "}
+            </div>
+          </div>
+          <div className="col-md-8 border-right">
+            <div className="p-3 py-">
+              <div className="d-flex justify-content-between align-items-center experience">
+                <span>
+                  {" "}
+                  <h4>User Details</h4>
+                </span>
+                <span className="border px-3 p-1 add-experience">
+                  <i className="fa fa-plus"></i>&nbsp;Edit
+                </span>
+              </div>
+            </div>
+            <div className="p-3 py-">
+              {/* <div className="d-flex justify-content-between align-items-center mb-3">
+              <h4 className="text-center">User Details</h4>
+            </div> */}
+              <div className="row mt-2">
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Name:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.name}
+                    </span>
+                  </h2>
+                </div>
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Email:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.email}
+                    </span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row mt-2">
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Contact:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.contact}
+                    </span>
+                  </h2>
+                </div>
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Aadhaar:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.aadhaarNumber}
+                    </span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row mt-2">
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Wieght:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.weight}
+                    </span>
+                  </h2>
+                </div>
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Hieght:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.height}
+                    </span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row mt-2">
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Pulse:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.pulse}
+                    </span>
+                  </h2>
+                </div>
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Duration:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.duration}
+                    </span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row mt-2">
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Ammount:{" "}
+                    <span
+                      style={{
+                        fontSize: "16px",
+                        fontWeight: "400",
+                        color: "green",
+                      }}
+                    >
+                      {" "}
+                      {userData?.amount} <span>₹</span>
+                    </span>
+                  </h2>
+                </div>
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Billing Date:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.bilingDate}
+                    </span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row mt-2">
+                <div className="col-md-6">
+                  <h2 className="labels" style={{ fontSize: "18px" }}>
+                    Dob:{" "}
+                    <span style={{ fontSize: "16px", fontWeight: "400" }}>
+                      {" "}
+                      {userData?.dob}
+                    </span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row mt-4 text-center">
+                <div className="col-md-12">
+                  <span
+                    onClick={printResult}
+                    className="border px-3 p-1 add-experience"
+                  >
+                    <i className="fa fa-plus"></i>&nbsp;Print Details
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="col-md-4">
+          <div className="p-3 py-5">
+            <div className="d-flex justify-content-between align-items-center experience">
+              <span>Edit Experience</span>
+              <span className="border px-3 p-1 add-experience">
+                <i className="fa fa-plus"></i>&nbsp;Edit
+              </span>
+            </div>
+          </div>
+        </div> */}
         </div>
       </div>
     </>

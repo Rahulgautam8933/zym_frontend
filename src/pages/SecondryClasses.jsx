@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Table, Modal } from "antd";
+import { Table } from "antd";
 import { Link, useNavigate } from "react-router-dom";
-import { FaEye, FaUserEdit } from "react-icons/fa";
+import { FaEye, FaUserEdit, FaWhatsapp } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+
+import { Modal, Button } from "react-bootstrap";
 import * as XLSX from "xlsx";
 import axios from "axios";
 import { getRequest } from "../Helpers/Helper";
@@ -21,6 +23,23 @@ const SecondryClasses = () => {
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
+
+  const [userNumber, setUserNumber] = useState("");
+
+  const [message, setMessage] = useState("");
+
+  const [formData, setFormData] = useState({
+    mobileNumber: "",
+    message: "",
+  });
+
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const sendMessage = (number) => {
+    setFormData({ mobileNumber: number, message: "" });
+    setModalShow(true);
+    setUserNumber(number);
+  };
 
   const onchangepage = () => {
     if (currentPage <= 2) {
@@ -49,7 +68,6 @@ const SecondryClasses = () => {
       })
       .catch((error) => {
         console.log(error);
-        
       });
     getRequest(`api/v1/birthday`)
       .then((res) => {
@@ -59,7 +77,6 @@ const SecondryClasses = () => {
       })
       .catch((error) => {
         console.log(error);
-        
       });
   }, [updateStatus, currentPage, query]);
 
@@ -80,6 +97,20 @@ const SecondryClasses = () => {
   const handleDelete = (id) => {
     setDeleteId(id);
     setShowDeleteModal(true);
+  };
+
+  const onSubmitMessage = () => {
+    if (message.length > 0) {
+      // Construct WhatsApp URL
+      let number = userNumber.replace(/[^\w\s]/gi, "").replace(/ /g, "");
+      let url = `https://web.whatsapp.com/send?phone=${number}&text=${encodeURIComponent(
+        message
+      )}&app_absent=${0}`;
+      window.open(url);
+      setModalShow(false);
+      setUserNumber(""); // Reset user number
+      setMessage(""); // Reset message
+    }
   };
 
   const handleDeleteConfirm = async () => {
@@ -168,6 +199,16 @@ const SecondryClasses = () => {
             <FaUserEdit />
           </button>
           <button
+            style={{
+              backgroundColor: "#25d366",
+              fontWeight: "bolder",
+            }}
+            onClick={() => sendMessage(record?.contact)}
+            className="btn h3 "
+          >
+            <FaWhatsapp />
+          </button>
+          <button
             className="btn btn-danger mx-1"
             onClick={() => handleDelete(record._id)}
           >
@@ -180,6 +221,60 @@ const SecondryClasses = () => {
 
   return (
     <>
+      <Modal show={modalShow} onHide={() => setModalShow(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Send WhatsApp Message</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Mobile Number: {userNumber}</p>
+
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onChange={(e) => setMessage(e.target.value)}
+          >
+            <option selected>Open this select menu</option>
+            <option
+              value="
+          Thank you for visiting Roshni Opticals!
+        Feel free to contact us 9616917142, 7985798138"
+            >
+              Thank you for visiting Roshni Opticals! Feel free to contact
+            </option>
+            <option
+              value="Dear Sir/Maa'm,
+        Your order is ready for pickup. Kindly collect it at your earliest convenience. 
+        Have questions? Let us know. Thanks!"
+            >
+              Dear Sir/Maa'm, Your order is ready for pickup. Kindly
+            </option>
+            <option value="🎁 Happy Birthday to our amazing customer! Your support means the world to us. Wishing you a day as fabulous as our latest eyewear collection! 🕶🎉 from Roshni Opticals">
+              🎁 Happy Birthday to our amazing customer! Your support means the
+            </option>
+            <option value="Happy Holi from Roshni Opticals! 🎉🌈 May your life be filled with vibrant colors and joyous moments. Have a wonderful and safe celebration!">
+              Happy Holi from Roshni Opticals! 🎉🌈 May
+            </option>
+          </select>
+
+          <textarea
+            className="form-control my-4"
+            rows="5"
+            cols="50"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Type your message here..."
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setModalShow(false)}>
+            Cancel
+          </Button>
+          <Button variant="primary" onClick={onSubmitMessage}>
+            Send
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
       <div className="row">
         <div className="col">
           <div className="birthday row">
