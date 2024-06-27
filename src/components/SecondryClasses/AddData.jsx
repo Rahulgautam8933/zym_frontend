@@ -77,7 +77,6 @@ function AddData() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
               className="form-control"
               id="email"
             />
@@ -91,7 +90,6 @@ function AddData() {
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              required
               className="form-control"
               id="contact"
               placeholder="Contact"
@@ -106,7 +104,6 @@ function AddData() {
               name="aadhaarNumber"
               value={formData.aadhaarNumber}
               onChange={handleChange}
-              required
               className="form-control"
               id="aadhaarNumber"
               placeholder="Aadhaar Number"
@@ -121,7 +118,6 @@ function AddData() {
               name="weight"
               value={formData.weight}
               onChange={handleChange}
-              required
               className="form-control"
               id="weight"
               placeholder="Weight"
@@ -136,7 +132,6 @@ function AddData() {
               name="height"
               value={formData.height}
               onChange={handleChange}
-              required
               className="form-control"
               id="height"
               placeholder="Height"
@@ -151,13 +146,12 @@ function AddData() {
               name="pulse"
               value={formData.pulse}
               onChange={handleChange}
-              required
               className="form-control"
               id="pulse"
               placeholder="Pulse"
             />
           </div>
-        <div className="col-6">
+          <div className="col-6">
             <label htmlFor="duration" className="form-label">
               Duration
             </label>
@@ -165,7 +159,6 @@ function AddData() {
               name="duration"
               value={formData.duration}
               onChange={handleChange}
-              required
               className="form-control"
               id="duration"
             >
@@ -208,7 +201,6 @@ function AddData() {
               name="bilingDate"
               value={formData.bilingDate}
               onChange={handleChange}
-              required
               className="form-control"
               id="bilingDate"
               placeholder="Billing Date"
@@ -223,7 +215,6 @@ function AddData() {
               name="dob"
               value={formData.dob}
               onChange={handleChange}
-              required
               className="form-control"
               id="dob"
               placeholder="Date of Birth"
@@ -237,7 +228,6 @@ function AddData() {
               type="file"
               name="aadhaarImage"
               onChange={handleChange}
-              required
               className="form-control"
               id="file"
             />
