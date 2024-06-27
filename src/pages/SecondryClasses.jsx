@@ -385,7 +385,9 @@ const SecondryClasses = () => {
             </div>
           </div>
         ) : (
+      <div style={{ width: "100%", overflowX: "auto" }}>
           <Table dataSource={dataSource} columns={columns} pagination={false} />
+      </div>
         )}
       </div>
 
