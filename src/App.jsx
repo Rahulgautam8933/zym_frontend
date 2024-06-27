@@ -9,6 +9,7 @@ import UserData from "./components/SecondryClasses/UserData";
 import EditData from "./components/SecondryClasses/EditData";
 
 import { Toaster } from "react-hot-toast";
+import Invoice from "./components/Invoice/Invoice";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/dashboard" element={<SecondryClasses />} />
           <Route path="/addData" element={<AddData />} />
           <Route path="/secondryClsses/userData/:id" element={<UserData />} />
+          <Route path="/secondryClsses/invoice/:id" element={<Invoice />} />
           <Route path="/secondryClsses/updateData/:id" element={<EditData />} />
         </Routes>
       </BrowserRouter>
