@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+header {
+  background: #333;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #0779e4 3px solid;
+}
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+header h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+.client-info,
+.terms,
+.signature {
+  margin: 20px 0;
+}
+.client-info div {
+  margin: 5px 0;
+}
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+.totals td {
+  font-weight: bold;
+}
+.terms,
+.signature {
+  margin-top: 40px;
+}
+.signature div {
+  display: inline-block;
+  margin-top: 40px;
+}
+.info_div {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
