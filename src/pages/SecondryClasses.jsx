@@ -93,6 +93,13 @@ const SecondryClasses = () => {
 
     console.log("Edit button clicked for ID:", id);
   };
+  const handleUser1 = (id) => {
+    // Handle edit logic with the ID
+
+    navigator(`/secondryClsses/invoice/${id}`);
+
+    console.log("Edit button clicked for ID:", id);
+  };
 
   const handleDelete = (id) => {
     setDeleteId(id);
@@ -191,6 +198,12 @@ const SecondryClasses = () => {
             onClick={() => handleUser(record._id)}
           >
             <FaEye />
+          </button>
+          <button
+            className="btn btn-primary mx-1"
+            onClick={() => handleUser1(record._id)}
+          >
+            Invoice
           </button>
           <button
             className="btn btn-secondary mx-1"
