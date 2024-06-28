@@ -28,6 +28,7 @@ function EditData() {
     pulse: "",
     duration: "",
     aadhaarNumber: "",
+    advance: "",
   });
 
   console.log("formData", formData);
@@ -66,6 +67,7 @@ function EditData() {
           contact: res?.data?.product?.contact,
           weight: res?.data?.product?.weight,
           amount: res?.data?.product?.amount,
+          advance: res?.data?.product?.advance,
           bilingDate: res?.data?.product?.bilingDate,
           dob: res?.data?.product?.dob,
           height: res?.data?.product?.height,
@@ -187,7 +189,7 @@ function EditData() {
               placeholder="Pulse"
             />
           </div>
-       <div className="col-6">
+          <div className="col-6">
             <label htmlFor="duration" className="form-label">
               Duration
             </label>
@@ -227,6 +229,21 @@ function EditData() {
               className="form-control"
               id="amount"
               placeholder="Amount"
+            />
+          </div>
+          <div className="col-6">
+            <label htmlFor="advance" className="form-label">
+              Advance Amount
+            </label>
+            <input
+              type="number"
+              name="advance"
+              value={formData.advance}
+              onChange={handleChange}
+              required
+              className="form-control"
+              id="advance"
+              placeholder="Advance Amount"
             />
           </div>
           <div className="col-6">
