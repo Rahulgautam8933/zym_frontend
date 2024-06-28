@@ -4,8 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { postRequest, postRequestForImg } from "../../Helpers/Helper";
-import imgs from "../../assets/demo.jpg";
-const defaultImage = "../../assets/demo.jpg";
+
 function AddData() {
   const navigator = useNavigate();
   const [result1, setResult1] = useState(false);
@@ -22,6 +21,7 @@ function AddData() {
     duration: "",
     aadhaarNumber: "",
     aadhaarImage: "",
+    advance: "",
   });
 
   const handleChange = (e) => {
@@ -37,7 +37,6 @@ function AddData() {
     const url = `api/v1/admin/product/new`;
     const cred = {
       ...formData,
-      aadhaarImage: formData.aadhaarImage || defaultImage,
     };
 
     postRequestForImg({ url: url, cred: cred })
@@ -193,6 +192,21 @@ function AddData() {
               required
               className="form-control"
               id="amount"
+              placeholder="Amount"
+            />
+          </div>
+          <div className="col-6">
+            <label htmlFor="advance" className="form-label">
+              Advance Amount
+            </label>
+            <input
+              type="number"
+              name="advance"
+              value={formData.advance}
+              onChange={handleChange}
+              required
+              className="form-control"
+              id="advance"
               placeholder="Amount"
             />
           </div>
