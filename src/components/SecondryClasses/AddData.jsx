@@ -11,7 +11,7 @@ function AddData() {
   const [result1, setResult1] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    email: "user@gmail.com",
     contact: "",
     weight: "",
     amount: "",
