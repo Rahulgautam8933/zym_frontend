@@ -85,6 +85,7 @@ const Invoice = () => {
                 <th>Advance Payment</th>
                 <th>Discount</th>
                 <th>Subtotal</th>
+                
               </tr>
             </thead>
             <tbody>
