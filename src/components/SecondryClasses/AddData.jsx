@@ -20,6 +20,7 @@ function AddData() {
     pulse: "",
     duration: "",
     aadhaarNumber: "",
+    aadhaarImage: null,
   });
 
   const handleChange = (e) => {
