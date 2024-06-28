@@ -4,7 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { postRequest, postRequestForImg } from "../../Helpers/Helper";
-
+import imgs from "../../assets/demo.jpg";
+const defaultImage = "../../assets/demo.jpg";
 function AddData() {
   const navigator = useNavigate();
   const [result1, setResult1] = useState(false);
@@ -36,6 +37,7 @@ function AddData() {
     const url = `api/v1/admin/product/new`;
     const cred = {
       ...formData,
+      aadhaarImage: formData.aadhaarImage || defaultImage,
     };
 
     postRequestForImg({ url: url, cred: cred })
