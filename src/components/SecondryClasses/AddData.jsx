@@ -11,7 +11,7 @@ function AddData() {
   const [result1, setResult1] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    email: "user@gmail.com",
+    email: "",
     contact: "",
     weight: "",
     amount: "",
@@ -82,6 +82,7 @@ function AddData() {
               onChange={handleChange}
               className="form-control"
               id="email"
+              required
             />
           </div>
           <div className="col-6">
