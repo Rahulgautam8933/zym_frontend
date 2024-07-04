@@ -296,7 +296,7 @@ const SecondryClasses = () => {
                 <>
                   <div className="d-flex col">
                     <div
-                      style={{ width: "250px" }}
+                      style={{ width: "220px" }}
                       class="alert alert-warning alert-dismissible fade show"
                       role="alert"
                     >
@@ -322,7 +322,7 @@ const SecondryClasses = () => {
                 <>
                   <div className="d-flex col">
                     <div
-                      style={{ width: "250px" }}
+                      style={{ width: "220px" }}
                       class="alert alert-warning alert-dismissible fade show"
                       role="alert"
                     >
@@ -346,7 +346,7 @@ const SecondryClasses = () => {
           </div>
         </div>
       </div>
-      <div className="container my-4">
+      <div className="container-fluid m-4 ">
         <div className="row my-4">
           <div className="col">
             <input
@@ -385,9 +385,13 @@ const SecondryClasses = () => {
             </div>
           </div>
         ) : (
-      <div style={{ width: "100%", overflowX: "auto" }}>
-          <Table dataSource={dataSource} columns={columns} pagination={false} />
-      </div>
+          <div style={{ width: "100%", overflowX: "auto" }}>
+            <Table
+              dataSource={dataSource}
+              columns={columns}
+              pagination={false}
+            />
+          </div>
         )}
       </div>
 
