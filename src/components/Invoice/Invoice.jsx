@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRequest } from "../../Helpers/Helper";
 
+import logo from "../../assets/logo.jpg";
+
 import "./Invoice.css";
 
 import { useReactToPrint } from "react-to-print";
@@ -41,7 +43,7 @@ const Invoice = () => {
       </div>
       <div ref={contentToPrint}>
         <header>
-          <img src="" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </header>
         <div style={{ width: "90%", margin: "auto" }} className="">
           <div className="info_div">
@@ -84,7 +86,11 @@ const Invoice = () => {
                 <th>Price</th>
                 <th>Advance Payment</th>
                 <th>Discount</th>
-                <th>Subtotal</th>
+                <th>
+                  {userData?.subtotal == userData?.amount
+                    ? " Subtotal"
+                    : "Payble Amount"}
+                </th>
               </tr>
             </thead>
             <tbody>

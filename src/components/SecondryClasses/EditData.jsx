@@ -95,7 +95,6 @@ function EditData() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              
               className="form-control"
               id="name"
             />
@@ -109,7 +108,6 @@ function EditData() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              
               className="form-control"
               id="email"
             />
@@ -123,7 +121,6 @@ function EditData() {
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              
               className="form-control"
               id="contact"
               placeholder="Contact"
@@ -138,7 +135,6 @@ function EditData() {
               name="aadhaarNumber"
               value={formData.aadhaarNumber}
               onChange={handleChange}
-              
               className="form-control"
               id="aadhaarNumber"
               placeholder="Aadhaar Number"
@@ -153,7 +149,6 @@ function EditData() {
               name="weight"
               value={formData.weight}
               onChange={handleChange}
-              
               className="form-control"
               id="weight"
               placeholder="Weight"
@@ -168,7 +163,6 @@ function EditData() {
               name="height"
               value={formData.height}
               onChange={handleChange}
-              
               className="form-control"
               id="height"
               placeholder="Height"
@@ -183,7 +177,6 @@ function EditData() {
               name="pulse"
               value={formData.pulse}
               onChange={handleChange}
-              
               className="form-control"
               id="pulse"
               placeholder="Pulse"
@@ -197,7 +190,6 @@ function EditData() {
               name="duration"
               value={formData.duration}
               onChange={handleChange}
-              
               className="form-control"
               id="duration"
             >
@@ -225,7 +217,6 @@ function EditData() {
               name="amount"
               value={formData.amount}
               onChange={handleChange}
-              
               className="form-control"
               id="amount"
               placeholder="Amount"
@@ -240,7 +231,6 @@ function EditData() {
               name="advance"
               value={formData.advance}
               onChange={handleChange}
-              required
               className="form-control"
               id="advance"
               placeholder="Advance Amount"
@@ -255,7 +245,6 @@ function EditData() {
               name="bilingDate"
               value={formData.bilingDate}
               onChange={handleChange}
-              
               className="form-control"
               id="bilingDate"
               placeholder="Billing Date"
@@ -270,7 +259,6 @@ function EditData() {
               name="dob"
               value={formData.dob}
               onChange={handleChange}
-              
               className="form-control"
               id="dob"
               placeholder="Date of Birth"

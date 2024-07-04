@@ -204,7 +204,6 @@ function AddData() {
               name="advance"
               value={formData.advance}
               onChange={handleChange}
-              required
               className="form-control"
               id="advance"
               placeholder="Amount"
