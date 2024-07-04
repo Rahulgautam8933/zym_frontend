@@ -85,7 +85,6 @@ const Invoice = () => {
                 <th>Quantity (Months)</th>
                 <th>Price</th>
                 <th>Advance Payment</th>
-                <th>Discount</th>
                 <th>
                   {userData?.subtotal == userData?.amount
                     ? " Subtotal"
@@ -100,14 +99,13 @@ const Invoice = () => {
                 <td>{userData?.duration / 30}</td>
                 <td>₹{userData?.amount ? userData?.amount : 0}</td>
                 <td>₹{userData?.advance ? userData?.advance : 0}</td>
-                <td>₹{userData?.discount ? userData?.discount : 0}</td>
                 <td>₹{userData?.subtotal ? userData?.subtotal : 0}</td>
               </tr>
               {/* More rows as needed */}
             </tbody>
             <tfoot>
               <tr className="totals">
-                <td colSpan="6">Total</td>
+                <td colSpan="5">Total</td>
                 <td>₹{userData?.subtotal ? userData?.subtotal : 0}</td>
               </tr>
             </tfoot>
