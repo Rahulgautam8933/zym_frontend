@@ -252,23 +252,21 @@ const SecondryClasses = () => {
             <option selected>Open this select menu</option>
             <option
               value="
-          Thank you for visiting Roshni Opticals!
-        Feel free to contact us 9616917142, 7985798138"
+         Happy Birthday, Enjoy a complimentary personal training session this month at Fit Care Zone!"
             >
-              Thank you for visiting Roshni Opticals! Feel free to contact
+              Happy Birthday
             </option>
-            <option
-              value="Dear Sir/Maa'm,
-        Your order is ready for pickup. Kindly collect it at your earliest convenience. 
-        Have questions? Let us know. Thanks!"
-            >
-              Dear Sir/Maa'm, Your order is ready for pickup. Kindly
+            <option value="Reminder: Your payment is overdue. Please settle it soon to continue enjoying our services. Thanks!">
+              Payment Delay Reminder
             </option>
-            <option value="🎁 Happy Birthday to our amazing customer! Your support means the world to us. Wishing you a day as fabulous as our latest eyewear collection! 🕶🎉 from Roshni Opticals">
-              🎁 Happy Birthday to our amazing customer! Your support means the
+            <option value="Thank you for visiting Fit Care Zone today! We hope you had a great workout. See you again soon!">
+              Thanks for Visiting
             </option>
-            <option value="Happy Holi from Roshni Opticals! 🎉🌈 May your life be filled with vibrant colors and joyous moments. Have a wonderful and safe celebration!">
-              Happy Holi from Roshni Opticals! 🎉🌈 May
+            <option value="Reminder: Your membership expires on [Date]. Please renew soon to continue your fitness journey with us.">
+              Membership Expiration Notice
+            </option>
+            <option value="Welcome to Fit Care Zone We're excited to have you join us. Let's achieve your fitness goals together!">
+              Welcome New Member
             </option>
           </select>
 
