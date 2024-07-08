@@ -220,6 +220,7 @@ function AddData() {
               onChange={handleChange}
               className="form-control"
               id="bilingDate"
+              required
               placeholder="Billing Date"
             />
           </div>
