@@ -41,6 +41,8 @@ const SecondryClasses = () => {
     setUserNumber(number);
   };
 
+  console.log("showDeleteModal", showDeleteModal);
+
   const onchangepage = () => {
     if (currentPage <= 2) {
       setCurrentPage(1);
@@ -104,6 +106,7 @@ const SecondryClasses = () => {
   const handleDelete = (id) => {
     setDeleteId(id);
     setShowDeleteModal(true);
+    console.log("delete", id);
   };
 
   const onSubmitMessage = () => {
@@ -411,11 +414,28 @@ const SecondryClasses = () => {
 
       <Modal
         title="Confirm Delete"
-        visible={showDeleteModal}
+        show={showDeleteModal}
         onOk={handleDeleteConfirm}
         onCancel={() => setShowDeleteModal(false)}
       >
-        <p>Are you sure you want to delete this item?</p>
+        <p className="text-center m-3">
+          Are you sure you want to delete this item?
+        </p>
+
+        <div
+          className="d-flex justify-content-center align-items-center gap-3"
+          style={{ height: "5rem" }}
+        >
+          <button className="btn btn-primary" onClick={handleDeleteConfirm}>
+            delete
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={() => setShowDeleteModal(false)}
+          >
+            Cancel
+          </button>
+        </div>
       </Modal>
     </>
   );
