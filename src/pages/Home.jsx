@@ -71,7 +71,7 @@ function Home() {
                 Password
               </label>
               <input
-                type="password"
+                type="text"
                 name="password"
                 onChange={onchangeData}
                 value={formData?.password}
